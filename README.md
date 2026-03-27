@@ -1,6 +1,6 @@
 # Anna Alcaide Devops Portfolio
 ![DevOps](https://img.shields.io/badge/DevOps-Portfolio-blue)
-![AWS](https://img.shields.io/badge/AWS-in_progress-orange)
+![AWS](https://img.shields.io/badge/AWS-deployed-orange)
 ![GCP](https://img.shields.io/badge/GCP-deployed-blue)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-production-blue)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)

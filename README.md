@@ -2,7 +2,7 @@
 ![DevOps](https://img.shields.io/badge/DevOps-Portfolio-yellow)
 ![AWS](https://img.shields.io/badge/AWS-deployed-orange)
 ![GCP](https://img.shields.io/badge/GCP-deployed-blue)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-production-blue)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-production-green)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
 ![CI/CD](https://img.shields.io/badge/CI/CD-GitHub_Actions-black)
 

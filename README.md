@@ -21,6 +21,12 @@ Welcome to my portfolio of DevOps and full-stack development projects. Here you'
   - Monitoring with Prometheus & Grafana  
   - Exposed via LoadBalancer  
 - **Technologies:** Python, Docker, Kubernetes, GCP (GKE), Cloud Run, ArgoCD.
+- **Technical Decisions & Challenges:**
+    Chose GKE over simpler runtimes like Cloud Run to gain full control over networking, scaling and Kubernetes-native operations.
+
+    Integrating Terraform across infrastructure and application layers introduced challenges around state management and resource dependencies.
+
+    Monitoring with Prometheus and Grafana was intentionally added in a later stage, once the system was stable, to enable more structured and efficient observability.
 - **Repository:** [python-url-shortener](https://github.com/sassenagh/python-url-shortener)
 - **Status:** Functional with automated deployment on GKE.
 - **Pipeline image:** `pipeline.png` in `screenshots/python-url-shortener/`.
@@ -37,6 +43,12 @@ Welcome to my portfolio of DevOps and full-stack development projects. Here you'
     - GitOps deployment with Argo CD
     - Infrastructure managed with Terraform
 - **Technologies:** Node.js, Express, Docker, GitHub Actions.
+- **Technical Decisions & Challenges:**
+    Selected EKS to work with AWS-native services like S3 while maintaining a Kubernetes-based architecture instead of serverless alternatives.
+
+    A significant challenge was defining and managing IAM policies to allow Terraform to provision infrastructure securely without over-permissioning.
+
+    Argo CD was introduced as a final step to implement a GitOps workflow and create a more realistic and production-like deployment setup.
 - **Repository:** [node-image-resizer](https://github.com/sassenagh/node-image-resizer)
 - **Status:** Functional with automated deployment on EKS.
 - **Pipeline image:** `pipeline.png` in `screenshots/node-image-resizer/`.
@@ -52,6 +64,12 @@ Welcome to my portfolio of DevOps and full-stack development projects. Here you'
     - Suggestions for improvements (resource limits, health checks, namespace, deprecated APIs)
     - Fallback review if OpenAI is not configured or quota is exhausted
 - **Technologies:** Python, Kubernetes, GitHub Actions, OpenAI API.
+- **Technical Decisions & Challenges:**
+    Built directly on Kubernetes instead of standalone scripts to simulate real-world CI/CD workflows and cluster-level validation.
+
+    Handling optional OpenAI integration with fallbacks was challenging, especially ensuring consistent behavior without external dependencies.
+
+    Parsing PR diffs and reliably detecting misconfigurations required careful logic to avoid false positives and noisy feedback.
 - **Repository:** [k8s-ai-pr-bot](https://github.com/sassenagh/k8s-ai-pr-bot)
 - **Status:** Functional, tested via pull requests.
 - **Screenshot of the bot's response on PR:** `pr-response.png` in `screenshots/k8s-ai-pr-bot/`.
@@ -71,6 +89,12 @@ Welcome to my portfolio of DevOps and full-stack development projects. Here you'
     - Automated security report generation and artifact upload
     - Intentional vulnerabilities (XSS) to demonstrate detection capabilities
 - **Technologies:** Python, Docker, Kubernetes, GitHub Actions, Semgrep, Trivy, OWASP ZAP.
+- **Technical Decisions & Challenges:**
+    Chose a multi-tool approach (Semgrep, Trivy, OWASP ZAP) to cover different layers of security instead of relying on a single scanner.
+
+    The main challenge was orchestrating scans efficiently in GitHub Actions without significantly increasing pipeline execution time.
+
+    Running DAST in a local Kubernetes context required workarounds like port-forwarding and careful environment setup.
 - **Repository:** [k8s-devsecops-pipeline](https://github.com/sassenagh/k8s-devsecops-pipeline)
 - **Status:** Functional, fully integrated DevSecOps pipeline with security scanning.
 - **Screenshot of the security report:** `pipeline.png` in `screenshots/k8s-devsecops-pipeline/`.

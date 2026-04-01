@@ -89,9 +89,19 @@ Welcome to my portfolio of DevOps and full-stack development projects. Here you'
 
 ---
 
-## About
+## Overview
 
 This portfolio reflects practical experience building and deploying cloud-native applications with a strong DevOps focus.
+
+---
+
+## About Me
+
+DevOps and Infrastructure Engineer with a solid foundation in software engineering.
+
+Experienced in building and operating cloud-native systems with Docker, Kubernetes and cloud platforms like GCP and AWS, focusing on scalability, resilience and automation.
+
+I bring a development-driven approach to infrastructure, prioritizing clean design, efficiency and long-term maintainability.
 
 ---
 
